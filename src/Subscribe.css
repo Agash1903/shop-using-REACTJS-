@@ -1,37 +1,139 @@
-
-.App{
-    display: flex;
-    margin-left: 50px;
+/* Base styles */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-body{
+
+.App {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.container {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px white;
+    background-color: #222; /* Dark background for better contrast */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Limit image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.product p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.card button {
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.card input {
+    font-size: 1.2em;
+    text-align: center;
+    width: 60px;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid white;
+    border-radius: 5px;
     background-color: black;
     color: white;
 }
-.container{
-    border: 2px solid white;
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 20px;
-    text-align: center;
-    justify-content: center;
-    box-shadow: 0 0  20px white;
-    /* display: flex; */
-    grid-column: 1fr 1fr 1fr;
 
+/* Media queries for tablets and larger mobile devices */
+@media (min-width: 768px) {
+    .App {
+        margin: 30px;
+    }
+
+    .container {
+        margin: 15px;
+        padding: 25px;
+        box-shadow: 0 0 20px white;
+    }
+
+    .product h2 {
+        font-size: 1.8em;
+    }
+
+    .product h3 {
+        font-size: 1.4em;
+    }
+
+    .card button {
+        font-size: 1.8em;
+        padding: 12px;
+    }
+
+    .card input {
+        font-size: 1.5em;
+        width: 80px;
+    }
 }
-button{
-    color: black;
-    font-size: 50px;
-}
-input{
-    padding: 14px 0px;
-    margin: 10px;
-    text-align: center;
-    justify-content: center;
-    font-size: large;
-}
-img{
-    width: 100%;
-    height: 300px;
+
+/* Media queries for desktops and larger devices */
+@media (min-width: 1024px) {
+    .App {
+        margin: 50px;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 30px;
+        box-shadow: 0 0 15px white;
+    }
+
+    .product h2 {
+        font-size: 2em;
+    }
+
+    .product h3 {
+        font-size: 1.6em;
+    }
+
+    .card button {
+        font-size: 2em;
+        padding: 14px;
+    }
+
+    .card input {
+        font-size: 1.8em;
+        width: 100px;
+    }
 }
